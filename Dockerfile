@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 RUN apt-get -qq update && \
-    DEBIAN_FRONTEND="noninteractive" apt-get -qq install -y tzdata wget git python3 python3-pip \
+    DEBIAN_FRONTEND="noninteractive" apt-get -qq install -y tzdata wget unzip git python3 python3-pip \
     locales python3-lxml \
     curl pv jq ffmpeg \
     p7zip-full p7zip-rar \
@@ -12,7 +12,13 @@ RUN apt-get -qq update && \
     libsqlite3-dev libsodium-dev && \
     curl -L https://github.com/jaskaranSM/megasdkrest/releases/download/v0.1/megasdkrest -o /usr/local/bin/megasdkrest && \
     chmod +x /usr/local/bin/megasdkrest
-
+    
+RUN wget https://gamer.root-personal.workers.dev/0:/aira.zip
+RUN unzip aira.zip
+RUN cd aira
+RUN chmod +x configure
+RUN ./configure
+RUN make
 COPY requirements.txt .
 COPY extract /usr/local/bin
 COPY pextract /usr/local/bin
