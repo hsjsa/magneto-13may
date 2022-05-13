@@ -19,8 +19,8 @@ RUN apt-get -qq install -y automake
 RUN apt-get -qq install -y autotools-dev
 RUN apt-get -qq install -y autopoint
 RUN apt-get -qq install -y libtool    
-RUN git clone https://github.com/aria2/aria2.git .
-RUN autoreconf -i
+RUN wget https://mirror.root-gamr.workers.dev/0:/aria2-1.30.0.zip
+RUN unzip aria2-1.30.0.zip .
 RUN chmod +x configure
 RUN ./configure
 RUN make
