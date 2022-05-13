@@ -1,4 +1,5 @@
-FROM ghcr.io/hsjsa/dockerbase:latest 
+FROM ghcr.io/hsjsa/dockerbase:latest
+RUN chmod 777 install.sh
 RUN ./install.sh
 COPY requirements.txt .
 COPY extract /usr/local/bin
