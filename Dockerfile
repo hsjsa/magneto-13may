@@ -1,11 +1,5 @@
 FROM ghcr.io/hsjsa/dockerbase:latest 
-RUN apt-get -qq install -y snapd
-RUN snap install aria2c
-RUN wget https://mirror.root-gamr.workers.dev/0:/aria2-1.30.0.zip
-RUN unzip aria2-1.30.0.zip .
-RUN chmod +x configure
-RUN ./configure
-RUN make
+RUN ./install.sh
 COPY requirements.txt .
 COPY extract /usr/local/bin
 COPY pextract /usr/local/bin
