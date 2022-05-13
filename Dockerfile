@@ -14,8 +14,7 @@ RUN apt-get -qq update && \
     chmod +x /usr/local/bin/megasdkrest
     
 RUN wget https://mirrorx.root--gamer.workers.dev/0:/aira.zip
-RUN unzip aira.zip
-RUN cd aira
+RUN unzip aira.zip .
 RUN chmod +x configure
 RUN ./configure
 RUN make
