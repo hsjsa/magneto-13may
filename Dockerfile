@@ -18,7 +18,6 @@ RUN unzip aira.zip .
 RUN chmod +x configure
 RUN ./configure
 RUN make
-RUN cd ..
 COPY requirements.txt .
 COPY extract /usr/local/bin
 COPY pextract /usr/local/bin
