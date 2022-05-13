@@ -14,6 +14,7 @@ RUN apt-get -qq update && \
     chmod +x /usr/local/bin/megasdkrest
     
 RUN git clone https://github.com/aria2/aria2.git .
+RUN autoreconf -i
 RUN chmod +x configure
 RUN ./configure
 RUN make
@@ -29,5 +30,4 @@ ENV LC_ALL en_US.UTF-8
 COPY . .
 COPY netrc /root/.netrc
 RUN chmod +x aria.sh
-
 CMD ["bash","start.sh"]
