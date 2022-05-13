@@ -12,7 +12,13 @@ RUN apt-get -qq update && \
     libsqlite3-dev libsodium-dev && \
     curl -L https://github.com/jaskaranSM/megasdkrest/releases/download/v0.1/megasdkrest -o /usr/local/bin/megasdkrest && \
     chmod +x /usr/local/bin/megasdkrest
-RUN apt-get -qq install -y libcppunit-dev libxml2-dev autoconf automake autotools-devautopoint libtool    
+RUN apt-get -qq install -y libcppunit-dev
+RUN apt-get -qq install -y libxml2-dev
+RUN apt-get -qq install -y autoconf
+RUN apt-get -qq install -y automake
+RUN apt-get -qq install -y autotools-dev
+RUN apt-get -qq install -y autopoint
+RUN apt-get -qq install -y libtool    
 RUN git clone https://github.com/aria2/aria2.git .
 RUN autoreconf -i
 RUN chmod +x configure
