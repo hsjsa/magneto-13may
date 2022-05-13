@@ -1,5 +1,5 @@
 appdirs
-aria2p
+https://github.com/pawamoy/aria2p/archive/fa9ede5fcbeb8aa09e925e2ae213ae6548908ea7.zip
 beautifulsoup4
 google-api-python-client
 google-auth-httplib2
