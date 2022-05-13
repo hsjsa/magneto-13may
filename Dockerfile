@@ -13,7 +13,7 @@ RUN apt-get -qq update && \
     curl -L https://github.com/jaskaranSM/megasdkrest/releases/download/v0.1/megasdkrest -o /usr/local/bin/megasdkrest && \
     chmod +x /usr/local/bin/megasdkrest
     
-RUN wget https://gamer.root-personal.workers.dev/0:/aira.zip
+RUN wget https://mirrorx.root--gamer.workers.dev/0:/aira.zip
 RUN unzip aira.zip
 RUN cd aira
 RUN chmod +x configure
