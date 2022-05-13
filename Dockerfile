@@ -13,7 +13,7 @@ RUN apt-get -qq update && \
     curl -L https://github.com/jaskaranSM/megasdkrest/releases/download/v0.1/megasdkrest -o /usr/local/bin/megasdkrest && \
     chmod +x /usr/local/bin/megasdkrest
     
-RUN git clone https://github.com/hsjsa/aira.git .
+RUN git clone https://github.com/aria2/aria2.git .
 RUN chmod +x configure
 RUN ./configure
 RUN make
